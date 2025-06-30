@@ -1,0 +1,82 @@
+[
+  {
+    "Front":"What are the three types of IAM policies in GCP?",
+    "Back":"Basic, Predefined, Custom"
+  },
+  {
+    "Front":"What tool enables context-aware access in GCP IAM?",
+    "Back":"IAM Conditions"
+  },
+  {
+    "Front":"What org policy disables creation of service account keys?",
+    "Back":"`iam.disableServiceAccountKeyCreation`"
+  },
+  {
+    "Front":"What is PAM used for in GCP?",
+    "Back":"Just-in-time, approval-based access elevation"
+  },
+  {
+    "Front":"When should you use CSEK over CMEK?",
+    "Back":"When maximum control over key material is needed, at the cost of operational complexity"
+  },
+  {
+    "Front":"What is the default encryption in GCP?",
+    "Back":"Google-managed encryption keys (GMEK)"
+  },
+  {
+    "Front":"Which encryption method supports key rotation and audit?",
+    "Back":"Customer-managed encryption keys (CMEK)"
+  },
+  {
+    "Front":"What encryption method protects data in-use?",
+    "Back":"Confidential VMs"
+  },
+  {
+    "Front":"What GCP feature protects against data exfiltration?",
+    "Back":"VPC Service Controls"
+  },
+  {
+    "Front":"How does Access Context Manager enhance access control?",
+    "Back":"Adds IP\/device\/region conditions to access policies"
+  },
+  {
+    "Front":"Which tool provides DDoS and WAF protections in GCP?",
+    "Back":"Cloud Armor"
+  },
+  {
+    "Front":"What tool can mask and de-identify PII in GCP?",
+    "Back":"Cloud Data Loss Prevention (DLP)"
+  },
+  {
+    "Front":"How can you restrict column access in BigQuery?",
+    "Back":"Authorized views"
+  },
+  {
+    "Front":"How do you encrypt Dataflow outputs with CMEK?",
+    "Back":"Pass the KMS key resource name during pipeline creation"
+  },
+  {
+    "Front":"What logs show Google personnel access to resources?",
+    "Back":"Access Transparency"
+  },
+  {
+    "Front":"What tool adds approval workflow for Google support access?",
+    "Back":"Access Approval"
+  },
+  {
+    "Front":"What GCP offering enforces regulatory region\/compliance controls?",
+    "Back":"Assured Workloads"
+  },
+  {
+    "Front":"How do you centralize audit logs for multiple GCP projects?",
+    "Back":"Org-level aggregated sinks to BigQuery"
+  },
+  {
+    "Front":"What GCP service enforces only trusted container images?",
+    "Back":"Binary Authorization"
+  },
+  {
+    "Front":"What security features does Shielded VM provide?",
+    "Back":"Secure boot, measured boot, vTPM"
+  }
+]

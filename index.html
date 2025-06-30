@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>GCP Security Flashcards</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f0f0; text-align: center; padding: 20px; }
+    #flashcard { background: white; border-radius: 8px; padding: 40px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); cursor: pointer; }
+    #frontBack { font-size: 1.5em; margin-bottom: 20px; }
+    #controls { margin-top: 20px; }
+    button { padding: 10px 20px; margin: 5px; font-size: 1em; }
+  </style>
+</head>
+<body>
+  <h1>GCP Security Engineer Flashcards</h1>
+  <div id="flashcard" onclick="flipCard()">
+    <div id="frontBack">Front</div>
+    <div id="cardText">Click "Next" to begin</div>
+  </div>
+  <div id="controls">
+    <button onclick="prevCard()">Previous</button>
+    <button onclick="nextCard()">Next</button>
+  </div>
+
+  <script>
+    let flashcards = [];
+    let current = 0;
+    let showFront = true;
+
+    fetch('gcp_security_flashcards.json')
+      .then(res => res.json())
+      .then(data => {
+        flashcards = data;
+        renderCard();
+      });
+
+    function renderCard() {
+      if (flashcards.length === 0) return;
+      const card = flashcards[current];
+      document.getElementById("frontBack").textContent = showFront ? "Front" : "Back";
+      document.getElementById("cardText").textContent = showFront ? card.Front : card.Back;
+    }
+
+    function flipCard() {
+      showFront = !showFront;
+      renderCard();
+    }
+
+    function nextCard() {
+      current = (current + 1) % flashcards.length;
+      showFront = true;
+      renderCard();
+    }
+
+    function prevCard() {
+      current = (current - 1 + flashcards.length) % flashcards.length;
+      showFront = true;
+      renderCard();
+    }
+  </script>
+</body>
+</html>
